@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
   height: 100vh;
   display: grid;
   align-items: start;
@@ -15,16 +14,8 @@
   font-family: var(--font-Montserrat);
   gap: 30px;
   justify-content: center;
-  padding-block-start: 20px;
   color: var(--color-white);
-
-  &__container {
-    display: grid;
-
-    &:nth-child(2) {
-      gap: 30px;
-    }
-  }
+  grid-template-rows: 160px 100px 100px auto;
 
   &__logo {
     font-size: 30px;
@@ -53,13 +44,14 @@
     gap: 25px;
     justify-content: end;
     align-items: center;
+    list-style: none;
   }
 
   &__additional-element {
     font-size: 72px;
     color: var(--color-white);
     font-weight: 400;
-    font-family: "KaushanScript";
+    font-family: var(--font-KaushanScript);
     text-align: center;
   }
 
@@ -85,6 +77,7 @@
     background-color: transparent;
     padding: 16px 34px;
     margin: auto;
+    cursor: pointer;
 
     &:hover {
       border: 3px solid var(--color-border);
@@ -147,49 +140,38 @@
     padding-top: 20px;
     align-items: flex-start;
 
-    &__container {
-      justify-content: initial;
-      max-width: 800px;
+    &__nav {
+      gap: 20px;
+      justify-content: space-between;
+      grid-template-rows: 1fr;
+      align-items: center;
+      align-content: center;
+      grid-template-columns: repeat(3, auro);
+    }
 
+    .nav__list {
+      gap: 10px;
+      margin: auto;
+      grid-template-rows: 1fr;
+      grid-auto-flow: row;
+      max-width: 100%;
+      align-items: center;
+      padding: 11px 0;
+    }
 
-
-      .header__nav {
-        gap: 20px;
-        justify-content: space-between;
-        grid-template-rows: 1fr;
-        align-items: center;
-        align-content: center;
-        grid-template-columns: repeat(3, auro);
+    .nav__item {
+      a {
+        padding: 0;
       }
+    }
 
-      .nav__list {
-        gap: 10px;
-        margin: auto;
-        grid-template-rows: 1fr;
-        grid-auto-flow: row;
-        max-width: 100%;
-        align-items: center;
-        padding: 11px 0;
+    .header__icons {
+      gap: 10px;
+      justify-content: center;
+    }
 
-      }
-
-      .nav__item {
-        a {
-          padding: 0;
-        }
-      }
-
-
-      .header__icons {
-        gap: 10px;
-        justify-content: center;
-      }
-
-      .header__logo {
-        grid-row: 1;
-      }
-
-
+    .header__logo {
+      grid-row: 1;
     }
 
     &__title {
@@ -199,7 +181,6 @@
 
     &__button {
       margin-top: auto;
-
     }
   }
 }
@@ -210,41 +191,37 @@
     padding-top: 20px;
     align-items: flex-start;
     height: 100vh;
+    grid-template-rows: auto 50px auto auto;
 
+    .header__logo {
+      justify-self: center;
+    }
 
-    &__container {
+    .header__nav {
+      gap: 20px;
+      justify-content: initial;
+      align-items: initial;
+      grid-template-rows: repeat(3, auto) !important;
+      grid-template-columns: 1fr !important;
+      overflow: hidden;
+    }
+
+    .nav__list {
+      gap: 10px;
+      margin: auto;
+      align-items: center;
       justify-content: center;
+    }
 
-      .header__logo {
-        justify-self: center;
-      }
+    .header__icons {
+      gap: 25px;
+      justify-content: center;
+      grid-template-columns: auto auto;
+      grid-template-rows: 1fr;
+    }
 
-      .header__nav {
-        gap: 20px;
-        justify-content: initial;
-        align-items: initial;
-        grid-template-rows: repeat(3, auto) !important;
-        grid-template-columns: 1fr !important;
-        overflow: hidden;
-      }
-
-      .nav__list {
-        gap: 10px;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .header__icons {
-        gap: 25px;
-        justify-content: center;
-        grid-template-columns: auto auto;
-        grid-template-rows: 1fr;
-      }
-
-      .header__logo {
-        grid-row: 1;
-      }
+    .header__logo {
+      grid-row: 1;
     }
 
     &__additional-element {
@@ -258,7 +235,6 @@
 
     &__button {
       margin-top: auto;
-
     }
   }
 }
