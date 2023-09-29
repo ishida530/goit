@@ -1,5 +1,27 @@
-@charset "UTF-8";
-/* Blok - Header */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  gap: 40px;
+}
+
+:root {
+  --font-Montserrat: "Montserrat";
+  --font-KaushanScript: "Kaushan Script";
+  --font-Roboto: "Roboto";
+  --color-border: #FCE38A;
+  --color-white: #fff;
+  --color-divider: #F38181;
+  --color-description: #999999;
+  --color-black: #333;
+}
+
 .header {
   background-color: #fce38a;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.7)), to(#f38181)), url("../images/header.svg");
@@ -15,13 +37,14 @@
           align-items: start;
   padding: 10px 20px;
   width: 100%;
-  font-family: "Montserrat";
+  font-family: var(--font-Montserrat);
   gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-padding-before: 20px;
           padding-block-start: 20px;
+  color: var(--color-white);
 }
 
 .header__container {
@@ -38,7 +61,7 @@
   font-weight: bold;
   -ms-grid-column-align: start;
       justify-self: start;
-  color: #fff;
+  color: var(--color-white);
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -48,7 +71,7 @@
 }
 
 .header__logo:hover {
-  color: #FCE38A;
+  color: var(--color-border);
 }
 
 .header__nav {
@@ -68,13 +91,9 @@
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
   gap: 25px;
-  /* Jednolita wartość odstępu */
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -82,9 +101,9 @@
 
 .header__additional-element {
   font-size: 72px;
-  color: #ffffff;
+  color: var(--color-white);
   font-weight: 400;
-  font-family: "Kaushan Script";
+  font-family: "KaushanScript";
   text-align: center;
 }
 
@@ -92,20 +111,20 @@
   font-size: 150px;
   line-height: 140px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-white);
   font-weight: 700;
-  font-family: "Montserrat";
+  font-family: var(--font-Montserrat);
   text-align: center;
 }
 
 .header__button {
   font-size: 14px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-white);
   font-weight: 700;
-  font-family: "Montserrat";
+  font-family: var(--font-Montserrat);
   text-align: center;
-  border: 3px solid #fff;
+  border: 3px solid var(--color-white);
   width: 172px;
   background-color: transparent;
   padding: 16px 34px;
@@ -113,11 +132,10 @@
 }
 
 .header__button:hover {
-  border: 3px solid #FCE38A;
-  color: #FCE38A;
+  border: 3px solid var(--color-border);
+  color: var(--color-border);
 }
 
-/* Blok - Nav */
 .nav__list {
   display: -ms-grid;
   display: grid;
@@ -134,7 +152,6 @@
   padding-bottom: 10px;
 }
 
-/* Element - Nav Item */
 .nav__item {
   border-bottom: 2px solid transparent;
 }
@@ -142,7 +159,7 @@
 .nav__item a {
   text-decoration: none;
   font-size: 14px;
-  color: #ffffff;
+  color: var(--color-white);
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
@@ -153,11 +170,10 @@
 }
 
 .nav__item a:hover {
-  border-bottom: 2px solid #FCE38A;
-  color: #FCE38A;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-border);
 }
 
-/* Element - Header Icon */
 .header__icon {
   text-decoration: none;
   display: -ms-grid;
@@ -166,14 +182,14 @@
   height: 24px;
   cursor: pointer;
   font-size: 24px;
-  color: #fff;
+  color: var(--color-white);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .header__icon:hover i::before {
-  color: #FCE38A;
+  color: var(--color-border);
 }
 
 @media screen and (max-width: 1024px) {
@@ -202,8 +218,8 @@
             align-items: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (auro)[3];
+        grid-template-columns: repeat(3, auro);
   }
   .header__container .nav__list {
     gap: 10px;
@@ -211,11 +227,11 @@
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     grid-auto-flow: row;
-    /* Stosuj to jednolicie, jeśli zamierzasz */
     max-width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 11px 0;
   }
   .header__container .nav__item a {
     padding: 0;
@@ -253,43 +269,43 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .header__container .header__logo {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
   .header__container .header__nav {
-    gap: 50px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    gap: 20px;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    -ms-grid-rows: (auto)[3] !important;
+        grid-template-rows: repeat(3, auto) !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
     overflow: hidden;
   }
   .header__container .nav__list {
     gap: 10px;
     margin: auto;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-flow: column;
-    max-width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .header__container .header__icons {
-    gap: 25px;
-    /* Jednolita wartość odstępu */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+  }
+  .header__container .header__icons {
+    gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
   }
   .header__container .header__logo {
     -ms-grid-row: 1;

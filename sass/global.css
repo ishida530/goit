@@ -4,4 +4,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+:root {
+  --font-Montserrat: Montserrat;
+  --font-KaushanScript: Kaushan Script;
+  --color-border: #FCE38A;
+  --color-white: #fff;
+}
 /*# sourceMappingURL=global.css.map */

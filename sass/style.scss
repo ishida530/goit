@@ -1,4 +1,5 @@
-/* Blok - Header */
+@import "../sass/global";
+
 .header {
   background-color: rgba(252, 227, 138, 1);
   background-image: linear-gradient(360deg, rgba(252, 227, 138, .7) 0%, rgba(243, 129, 129, 1) 100%), url('../images/header.svg');
@@ -11,10 +12,11 @@
   align-items: start;
   padding: 10px 20px;
   width: 100%;
-  font-family: "Montserrat";
+  font-family: var(--font-Montserrat);
   gap: 30px;
   justify-content: center;
   padding-block-start: 20px;
+  color: var(--color-white);
 
   &__container {
     display: grid;
@@ -28,13 +30,13 @@
     font-size: 30px;
     font-weight: bold;
     justify-self: start;
-    color: #fff;
+    color: var(--color-white);
     display: grid;
     align-items: center;
     cursor: pointer;
 
     &:hover {
-      color: #FCE38A;
+      color: var(--color-border);
     }
   }
 
@@ -49,17 +51,15 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 25px;
-    /* Jednolita wartość odstępu */
     justify-content: end;
-    grid-column: 3 / 4;
     align-items: center;
   }
 
   &__additional-element {
     font-size: 72px;
-    color: #ffffff;
+    color: var(--color-white);
     font-weight: 400;
-    font-family: "Kaushan Script";
+    font-family: "KaushanScript";
     text-align: center;
   }
 
@@ -67,33 +67,32 @@
     font-size: 150px;
     line-height: 140px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--color-white);
     font-weight: 700;
-    font-family: "Montserrat";
+    font-family: var(--font-Montserrat);
     text-align: center;
   }
 
   &__button {
     font-size: 14px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--color-white);
     font-weight: 700;
-    font-family: "Montserrat";
+    font-family: var(--font-Montserrat);
     text-align: center;
-    border: 3px solid #fff;
+    border: 3px solid var(--color-white);
     width: 172px;
     background-color: transparent;
     padding: 16px 34px;
     margin: auto;
 
     &:hover {
-      border: 3px solid #FCE38A;
-      color: #FCE38A;
+      border: 3px solid var(--color-border);
+      color: var(--color-border);
     }
   }
 }
 
-/* Blok - Nav */
 .nav__list {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -106,14 +105,13 @@
   padding-bottom: 10px;
 }
 
-/* Element - Nav Item */
 .nav__item {
   border-bottom: 2px solid transparent;
 
   a {
     text-decoration: none;
     font-size: 14px;
-    color: #ffffff;
+    color: var(--color-white);
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
@@ -122,13 +120,12 @@
     padding: 11px 0;
 
     &:hover {
-      border-bottom: 2px solid #FCE38A;
-      color: #FCE38A;
+      border-bottom: 2px solid var(--color-border);
+      color: var(--color-border);
     }
   }
 }
 
-/* Element - Header Icon */
 .header__icon {
   text-decoration: none;
   display: grid;
@@ -136,11 +133,11 @@
   height: 24px;
   cursor: pointer;
   font-size: 24px;
-  color: #fff;
+  color: var(--color-white);
   align-items: center;
 
   &:hover i::before {
-    color: #FCE38A;
+    color: var(--color-border);
   }
 }
 
@@ -162,7 +159,7 @@
         grid-template-rows: 1fr;
         align-items: center;
         align-content: center;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, auro);
       }
 
       .nav__list {
@@ -170,9 +167,9 @@
         margin: auto;
         grid-template-rows: 1fr;
         grid-auto-flow: row;
-        /* Stosuj to jednolicie, jeśli zamierzasz */
         max-width: 100%;
         align-items: center;
+        padding: 11px 0;
 
       }
 
@@ -218,42 +215,36 @@
     &__container {
       justify-content: center;
 
+      .header__logo {
+        justify-self: center;
+      }
 
       .header__nav {
-        gap: 50px;
-        justify-content: space-between;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(3, auto);
-        align-items: center;
-        align-content: center;
+        gap: 20px;
+        justify-content: initial;
+        align-items: initial;
+        grid-template-rows: repeat(3, auto) !important;
+        grid-template-columns: 1fr !important;
         overflow: hidden;
       }
 
       .nav__list {
         gap: 10px;
         margin: auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-auto-flow: column;
-        max-width: 100%;
         align-items: center;
+        justify-content: center;
       }
 
       .header__icons {
         gap: 25px;
-        /* Jednolita wartość odstępu */
         justify-content: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
       }
 
       .header__logo {
         grid-row: 1;
       }
-
-
-
-
-
     }
 
     &__additional-element {
