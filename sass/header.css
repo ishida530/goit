@@ -166,6 +166,7 @@ html body main {
 
 .nav__item {
   border-bottom: 2px solid transparent;
+  padding-top: 11px;
 }
 
 .nav__item a {
@@ -178,7 +179,7 @@ html body main {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-bottom: 2px solid transparent;
-  padding: 11px 0;
+  padding-bottom: 11px;
 }
 
 .nav__item a:hover {
