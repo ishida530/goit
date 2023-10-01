@@ -5,13 +5,17 @@
           box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
   display: -ms-grid;
   display: grid;
   gap: 40px;
 }
 
-body main {
+html body main {
   display: -ms-grid;
   display: grid;
   gap: 90px;
@@ -31,6 +35,9 @@ body main {
   --color-gradient-start: rgba(252, 227, 138, 0.7);
   --color-gradient-end: rgba(243, 129, 129, 1);
   --color-icon: #f38181;
+  --color-border-footer: #E5E5E5;
+  --color-placeholder: #CCCCCC
+;
 }
 
 .header {
@@ -133,6 +140,7 @@ body main {
   padding: 16px 34px;
   margin: auto;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header__button:hover {
@@ -317,4 +325,4 @@ body main {
     margin-top: auto;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=header.css.map */

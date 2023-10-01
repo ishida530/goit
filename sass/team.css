@@ -5,13 +5,17 @@
           box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
   display: -ms-grid;
   display: grid;
   gap: 40px;
 }
 
-body main {
+html body main {
   display: -ms-grid;
   display: grid;
   gap: 90px;
@@ -31,6 +35,9 @@ body main {
   --color-gradient-start: rgba(252, 227, 138, 0.7);
   --color-gradient-end: rgba(243, 129, 129, 1);
   --color-icon: #f38181;
+  --color-border-footer: #E5E5E5;
+  --color-placeholder: #CCCCCC
+;
 }
 
 .team {
@@ -52,6 +59,15 @@ body main {
   gap: 15px;
   color: var(--color-font);
   padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.team__headline :nth-child(1) {
+  text-transform: lowercase;
+}
+
+.team__headline :nth-child(1)::first-letter {
+  text-transform: uppercase;
 }
 
 .team__headline-text {
@@ -83,6 +99,12 @@ body main {
 .team__headline-description {
   max-width: 940px;
   text-align: center;
+  text-transform: lowercase;
+  margin: 0 auto;
+}
+
+.team__headline-description::first-letter {
+  text-transform: uppercase;
 }
 
 .team__list {
@@ -185,14 +207,14 @@ body main {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end)));
   background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
   z-index: 1;
   z-index: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
   opacity: 0;
 }
 
@@ -223,7 +245,7 @@ body main {
 }
 
 .team__person-image-1:hover::after {
-  opacity: .1;
+  opacity: .9;
 }
 
 .team__person-image-1:hover::before {
@@ -271,14 +293,14 @@ body main {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end)));
   background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
   z-index: 1;
   z-index: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
   opacity: 0;
 }
 
@@ -309,7 +331,7 @@ body main {
 }
 
 .team__person-image-2:hover::after {
-  opacity: .1;
+  opacity: .9;
 }
 
 .team__person-image-2:hover::before {
@@ -357,14 +379,14 @@ body main {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end)));
   background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
   z-index: 1;
   z-index: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
   opacity: 0;
 }
 
@@ -395,7 +417,7 @@ body main {
 }
 
 .team__person-image-3:hover::after {
-  opacity: .1;
+  opacity: .9;
 }
 
 .team__person-image-3:hover::before {
@@ -416,6 +438,7 @@ body main {
           margin-block-start: 27px;
   -webkit-margin-after: 7px;
           margin-block-end: 7px;
+  text-transform: uppercase;
 }
 
 .team__person-position {
@@ -436,6 +459,18 @@ body main {
         grid-template-columns: 1fr;
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
+  }
+  .team__person-image-1:after {
+    bottom: unset;
+    right: unset;
+  }
+  .team__person-image-2:after {
+    bottom: unset;
+    right: unset;
+  }
+  .team__person-image-3:after {
+    bottom: unset;
+    right: unset;
   }
 }
 

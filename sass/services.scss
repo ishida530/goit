@@ -1,4 +1,4 @@
-@import "../sass/global";
+@import "_global";
 
 .services {
     display: grid;
@@ -49,6 +49,7 @@
         &__items-container {
             grid-template-columns: repeat(2, auto);
             grid-auto-columns: auto;
+            padding: 0 25px;
         }
     }
 }

@@ -1,4 +1,4 @@
-@import "../sass/global";
+@import "_global";
 
 .header {
   background-color: var(--color-background);
@@ -81,6 +81,7 @@
     padding: 16px 34px;
     margin: auto;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       border: 3px solid var(--color-border);

@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  display: -ms-grid;
+  display: grid;
+  gap: 40px;
+}
+
+html body main {
+  display: -ms-grid;
+  display: grid;
+  gap: 90px;
+}
+
+:root {
+  --font-Montserrat: "Montserrat";
+  --font-KaushanScript: "Kaushan Script";
+  --font-Roboto: "Roboto";
+  --color-border: #fce38a;
+  --color-white: #fff;
+  --color-divider: #f38181;
+  --color-description: #999999;
+  --color-font: #333;
+  --color_image: #95e1d3;
+  --color-background: #fce38a;
+  --color-gradient-start: rgba(252, 227, 138, 0.7);
+  --color-gradient-end: rgba(243, 129, 129, 1);
+  --color-icon: #f38181;
+  --color-border-footer: #E5E5E5;
+  --color-placeholder: #CCCCCC
+;
+}
+
+.footer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border-footer);
+  -webkit-padding-before: 10px;
+          padding-block-start: 10px;
+  -webkit-padding-after: 170px;
+          padding-block-end: 170px;
+  -webkit-margin-before: 80px;
+          margin-block-start: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 40px;
+      grid-template-rows: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: var(--font-Montserrat);
+  color: var(--color-font);
+}
+
+.footer__copyright {
+  padding: 10px 0;
+}
+
+.footer__author {
+  color: var(--color-icon);
+}
+
+.footer__subscribe-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer__email {
+  width: 100%;
+  max-width: 236px;
+  height: 100%;
+  padding: 10px 12px;
+  font-family: var(--font-Roboto);
+  font-size: 15px;
+  line-height: 18px;
+  border: 1px solid var(--color-border-footer);
+  outline: none;
+  caret-color: var(--color-border-footer);
+}
+
+.footer__subscribe-button {
+  background-color: var(--color_image);
+  color: var(--color-white);
+  border: none;
+  padding: 11px 32px;
+  font-family: var(--font-Montserrat);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footer__subscribe-button:hover {
+  background-color: var(--color-border);
+  color: var(--color-font);
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+    -webkit-padding-before: 40px;
+            padding-block-start: 40px;
+  }
+  .footer__copyright {
+    text-align: center;
+  }
+  .footer__subscribe-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  .footer__email {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0px;
+    -webkit-padding-before: 40px;
+            padding-block-start: 40px;
+  }
+  .footer__copyright {
+    text-align: center;
+  }
+  .footer__subscribe-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .footer__email {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
