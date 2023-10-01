@@ -6,46 +6,13 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    &__headline {
-        display: grid;
-        grid-column: 1 / -1;
-        text-align: center;
-        gap: 15px;
-        padding-block-end: 35px;
-        position: relative;
-        color: var(--color-black);
-
-        &::after {
-            position: absolute;
-            display: block;
-            content: "";
-            bottom: 0;
-            left: calc(50% - 30px);
-            width: 60px;
-            height: 3px;
-            background-color: var(--color-divider);
-        }
-    }
-
-    &__headline-text {
-        font-family: var(--font-KaushanScript);
-        font-size: 24px;
-
-    }
-
-    &__headline-title {
-        font-family: var(--font-Montserrat);
-        font-size: 30px;
-
-    }
+    @include section-headline;
 
     &__items-container {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 100px 50px;
-        padding: 10px;
         list-style: none;
-
     }
 
     &__item-figure {
@@ -53,8 +20,7 @@
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         gap: 11px 20px;
-
-
+        padding: 0 10px;
 
         img {
             width: 32px;
@@ -63,11 +29,10 @@
         }
 
         .services__item-title {
-            color: var(--color-black);
+            color: var(--color-font);
             font-family: var(--font-Montserrat);
             line-height: 16px;
             font-size: 14px;
-
         }
 
         .services__item-description {
@@ -77,8 +42,6 @@
             line-height: 18px;
         }
     }
-
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -92,20 +55,16 @@
 
 @media screen and (max-width: 768px) {
     .services {
-
-
         &__items-container {
             grid-template-columns: repeat(1, auto);
             grid-auto-columns: auto;
         }
 
         &__item-figure {
-
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
             gap: 11px 20px;
             justify-content: center;
-
 
             img {
                 width: 32px;
@@ -119,7 +78,6 @@
 
             .services__item-description {
                 text-align: center;
-
             }
         }
     }

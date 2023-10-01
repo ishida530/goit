@@ -11,15 +11,26 @@ body {
   gap: 40px;
 }
 
+body main {
+  display: -ms-grid;
+  display: grid;
+  gap: 90px;
+}
+
 :root {
   --font-Montserrat: "Montserrat";
   --font-KaushanScript: "Kaushan Script";
   --font-Roboto: "Roboto";
-  --color-border: #FCE38A;
+  --color-border: #fce38a;
   --color-white: #fff;
-  --color-divider: #F38181;
+  --color-divider: #f38181;
   --color-description: #999999;
-  --color-black: #333;
+  --color-font: #333;
+  --color_image: #95e1d3;
+  --color-background: #fce38a;
+  --color-gradient-start: rgba(252, 227, 138, 0.7);
+  --color-gradient-end: rgba(243, 129, 129, 1);
+  --color-icon: #f38181;
 }
 
 .services {
@@ -36,13 +47,26 @@ body {
   grid-column: 1 / -1;
   text-align: center;
   gap: 15px;
-  -webkit-padding-after: 35px;
-          padding-block-end: 35px;
-  position: relative;
-  color: var(--color-black);
+  color: var(--color-font);
+  padding: 0 10px;
 }
 
-.services__headline::after {
+.services__headline-text {
+  font-family: var(--font-KaushanScript);
+  font-size: 24px;
+}
+
+.services__headline-title {
+  position: relative;
+  font-family: var(--font-Montserrat);
+  font-size: 30px;
+  -webkit-padding-after: 35px;
+          padding-block-end: 35px;
+  -webkit-margin-after: 40px;
+          margin-block-end: 40px;
+}
+
+.services__headline-title::after {
   position: absolute;
   display: block;
   content: "";
@@ -53,23 +77,12 @@ body {
   background-color: var(--color-divider);
 }
 
-.services__headline-text {
-  font-family: var(--font-KaushanScript);
-  font-size: 24px;
-}
-
-.services__headline-title {
-  font-family: var(--font-Montserrat);
-  font-size: 30px;
-}
-
 .services__items-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
   grid-gap: 100px 50px;
-  padding: 10px;
   list-style: none;
 }
 
@@ -81,6 +94,7 @@ body {
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   gap: 11px 20px;
+  padding: 0 10px;
 }
 
 .services__item-figure img {
@@ -92,7 +106,7 @@ body {
 }
 
 .services__item-figure .services__item-title {
-  color: var(--color-black);
+  color: var(--color-font);
   font-family: var(--font-Montserrat);
   line-height: 16px;
   font-size: 14px;

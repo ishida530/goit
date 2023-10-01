@@ -6,7 +6,12 @@
 
 body {
   display: grid;
-  gap: 40px
+  gap: 40px;
+
+  main {
+    display: grid;
+    gap: 90px;
+  }
 }
 
 :root {
@@ -15,9 +20,49 @@ body {
   --font-KaushanScript: "Kaushan Script";
   --font-Roboto: "Roboto";
   // COLORS
-  --color-border: #FCE38A;
+  --color-border: #fce38a;
   --color-white: #fff;
-  --color-divider: #F38181;
+  --color-divider: #f38181;
   --color-description: #999999;
-  --color-black: #333;
+  --color-font: #333;
+  --color_image: #95e1d3;
+  --color-background: #fce38a;
+  --color-gradient-start: rgba(252, 227, 138, 0.7);
+  --color-gradient-end: rgba(243, 129, 129, 1);
+  --color-icon: #f38181;
+}
+
+@mixin section-headline {
+  &__headline {
+    display: grid;
+    grid-column: 1 / -1;
+    text-align: center;
+    gap: 15px;
+    color: var(--color-font);
+    padding: 0 10px;
+  }
+
+  &__headline-text {
+    font-family: var(--font-KaushanScript);
+    font-size: 24px;
+  }
+
+  &__headline-title {
+    position: relative;
+    font-family: var(--font-Montserrat);
+    font-size: 30px;
+    padding-block-end: 35px;
+    margin-block-end: 40px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 0;
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 3px;
+      background-color: var(--color-divider);
+    }
+  }
 }

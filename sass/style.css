@@ -11,21 +11,32 @@ body {
   gap: 40px;
 }
 
+body main {
+  display: -ms-grid;
+  display: grid;
+  gap: 90px;
+}
+
 :root {
   --font-Montserrat: "Montserrat";
   --font-KaushanScript: "Kaushan Script";
   --font-Roboto: "Roboto";
-  --color-border: #FCE38A;
+  --color-border: #fce38a;
   --color-white: #fff;
-  --color-divider: #F38181;
+  --color-divider: #f38181;
   --color-description: #999999;
-  --color-black: #333;
+  --color-font: #333;
+  --color_image: #95e1d3;
+  --color-background: #fce38a;
+  --color-gradient-start: rgba(252, 227, 138, 0.7);
+  --color-gradient-end: rgba(243, 129, 129, 1);
+  --color-icon: #f38181;
 }
 
 .header {
-  background-color: #fce38a;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.7)), to(#f38181)), url("../images/header.svg");
-  background-image: linear-gradient(360deg, rgba(252, 227, 138, 0.7) 0%, #f38181 100%), url("../images/header.svg");
+  background-color: var(--color-background);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/header.svg");
+  background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/header.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -156,8 +167,8 @@ body {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-bottom: 2px solid transparent;
   padding: 11px 0;
 }
@@ -299,8 +310,8 @@ body {
     font-size: 32px;
   }
   .header__title {
-    font-size: 54px;
-    line-height: 67px;
+    font-size: 47px;
+    line-height: 55px;
   }
   .header__button {
     margin-top: auto;
