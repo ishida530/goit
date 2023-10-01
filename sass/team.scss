@@ -93,10 +93,8 @@
                 display: block;
                 content: "";
                 position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
+                top: -100%;
+                left: -100%;
                 background-color: linear-gradient(360deg,
                         transparent 0%,
                         transparent 100%);
@@ -210,6 +208,11 @@
 
                 @if $personIndex ==2 {
                     background-position: 70%;
+                }
+
+                &:before,
+                &:after {
+                    position: initial;
                 }
             }
         }

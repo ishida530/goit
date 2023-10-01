@@ -186,10 +186,8 @@ body main {
   display: block;
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  top: -100%;
+  left: -100%;
   background-color: linear-gradient(360deg, transparent 0%, transparent 100%);
   z-index: 1;
   opacity: 0;
@@ -280,10 +278,8 @@ body main {
   display: block;
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  top: -100%;
+  left: -100%;
   background-color: linear-gradient(360deg, transparent 0%, transparent 100%);
   z-index: 1;
   opacity: 0;
@@ -374,10 +370,8 @@ body main {
   display: block;
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  top: -100%;
+  left: -100%;
   background-color: linear-gradient(360deg, transparent 0%, transparent 100%);
   z-index: 1;
   opacity: 0;
@@ -480,13 +474,22 @@ body main {
     position: initial;
     background-position: 30%;
   }
+  .team__person-image-1:before, .team__person-image-1:after {
+    position: initial;
+  }
   .team__person-image-2 {
     background-position: 100%;
     position: initial;
     background-position: 70%;
   }
+  .team__person-image-2:before, .team__person-image-2:after {
+    position: initial;
+  }
   .team__person-image-3 {
     background-position: 100%;
+    position: initial;
+  }
+  .team__person-image-3:before, .team__person-image-3:after {
     position: initial;
   }
 }
