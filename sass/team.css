@@ -173,7 +173,7 @@ html body main {
   width: 380px;
   height: 470px;
   background-color: var(--color-background);
-  background-image: url("../images/person1.svg");
+  background-image: url("../images/person1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -197,7 +197,7 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-1 {
-    background-image: url("../images/person1@2x.svg");
+    background-image: url("../images/person1@2x.jpg");
   }
 }
 
@@ -239,8 +239,8 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-1:hover {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person1@2x.svg");
-    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person1@2x.svg");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person1@2x.jpg");
+    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person1@2x.jpg");
   }
 }
 
@@ -260,7 +260,7 @@ html body main {
   width: 380px;
   height: 470px;
   background-color: var(--color-background);
-  background-image: url("../images/person2.svg");
+  background-image: url("../images/person2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -283,7 +283,7 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-2 {
-    background-image: url("../images/person2@2x.svg");
+    background-image: url("../images/person2@2x.jpg");
   }
 }
 
@@ -325,8 +325,8 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-2:hover {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person2@2x.svg");
-    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person2@2x.svg");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person2@2x.jpg");
+    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person2@2x.jpg");
   }
 }
 
@@ -346,7 +346,7 @@ html body main {
   width: 380px;
   height: 470px;
   background-color: var(--color-background);
-  background-image: url("../images/person3.svg");
+  background-image: url("../images/person3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -369,7 +369,7 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-3 {
-    background-image: url("../images/person3@2x.svg");
+    background-image: url("../images/person3@2x.jpg");
   }
 }
 
@@ -411,8 +411,8 @@ html body main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .team__person-image-3:hover {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person3@2x.svg");
-    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person3@2x.svg");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(var(--color-gradient-start)), to(var(--color-gradient-end))), url("../images/person3@2x.jpg");
+    background-image: linear-gradient(360deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%), url("../images/person3@2x.jpg");
   }
 }
 
