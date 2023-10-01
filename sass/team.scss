@@ -18,7 +18,6 @@
         grid-template-columns: repeat(3, 380px);
         grid-template-rows: 1fr;
         gap: 30px;
-        overflow: hidden;
     }
 
     &__person-details {
@@ -74,11 +73,11 @@
             left: 0;
             right: 0;
             top: 0;
-            transition: all 1s;
             display: grid;
             justify-content: center;
             align-items: center;
-            transition: 1s;
+            transition: all 1s;
+
 
             @if $personIndex ==1 {
                 background-position: 15%;
@@ -90,17 +89,20 @@
             }
 
             &::after {
-                display: block;
                 content: "";
+                display: block;
                 position: absolute;
-                top: -100%;
-                left: -100%;
-                background-color: linear-gradient(360deg,
-                        transparent 0%,
-                        transparent 100%);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(360deg,
+                        var(--color-gradient-start) 0%,
+                        var(--color-gradient-end) 100%, );
                 z-index: 1;
+                z-index: 1;
+                transition: all 1s;
                 opacity: 0;
-                transition: 1s;
             }
 
             &::before {
@@ -122,9 +124,6 @@
             }
 
             &:hover {
-                top: -15px;
-                left: -15px;
-                background-image: url("../images/person#{$personIndex}@2x.svg");
 
                 @media (-webkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi) {
@@ -135,10 +134,7 @@
                 }
 
                 &::after {
-                    opacity: 1;
-                    background-image: linear-gradient(360deg,
-                            var(--color-gradient-start) 0%,
-                            var(--color-gradient-end) 100%);
+                    opacity: .1;
                 }
 
                 &::before {
@@ -195,12 +191,12 @@
         &__list {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
+            overflow: hidden;
         }
 
         @for $personIndex from 1 through 3 {
             &__person-image-#{$personIndex} {
                 background-position: 100%;
-                position: initial;
 
                 @if $personIndex ==1 {
                     background-position: 30%;
@@ -210,9 +206,8 @@
                     background-position: 70%;
                 }
 
-                &:before,
-                &:after {
-                    position: initial;
+                &:before {
+                    display: none;
                 }
             }
         }
